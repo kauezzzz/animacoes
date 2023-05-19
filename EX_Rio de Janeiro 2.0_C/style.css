@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    box-sizing: border-box;
+}
+
+.plano-de-fundo {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(imagens/praia.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navgaleria {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #999;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navgaleria img {
+    margin-top: 15px;
+}
+
+nav .logo {
+    width: 160px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 25px;
+    letter-spacing: 3px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+}
+
+span {
+    color: transparent;
+    background-image: linear-gradient(yellow, yellow);
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: -500px 0;
+    animation: backcolor 3s linear infinite alternate;
+}
+
+.plano-fundo {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navrio {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navrio .logo {
+    width: 20px;
+}
+
+.navrio ul li {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.conteudo {
+    text-align: center;
+}
+
+.conteudo h1 {
+    font-size: 70px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.conteudo h1:hover {
+    -webkit-text-stroke: 2px #fff; 
+    color: transparent;
+}
+
+.conteudo a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bodycontato {
+    background: #999;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.contato {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main#album {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section.coluna {
+    flex: 1 1 100%;
+    padding: 0px 5px;
+}
+
+section > img {
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+@media (min-aspect-radio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@keyframes backcolor {
+    100% {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 40px
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section.coluna {
+        flex: 1 1 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section.coluna {
+        flex: 1 1 25%;
+    }
+}
